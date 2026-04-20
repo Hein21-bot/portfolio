@@ -159,6 +159,22 @@ export const projects = [
     icon: "🗺",
     type: "frontend",
   },
+  {
+    name: "Dota 2 Esport Tracker",
+    desc: "Dota 2 tournament tracker syncing live match data from OpenDota and PandaScore APIs on a cron schedule. Golang backend with Neon PostgreSQL, deployed on Cloudflare Pages.",
+    stack: ["Golang", "Gin", "GORM", "PostgreSQL", "Neon DB", "OpenDota API", "PandaScore API"],
+    icon: "🎮",
+    type: "fullstack",
+    link: "https://esport-tracker.pages.dev/",
+  },
+  {
+    name: "NovelBin — Myanmar Novel Reader",
+    desc: "Full-stack Myanmar-translated Chinese web novel platform with SSR, dark/light mode, admin panel, and a self-pinging Express backend on Hugging Face Spaces backed by AWS DynamoDB.",
+    stack: ["Nuxt 3", "Vue 3", "Node.js", "Express", "AWS DynamoDB", "AWS SDK v3", "Docker"],
+    icon: "📖",
+    type: "fullstack",
+    link: "https://novel-fe.pages.dev/",
+  },
 ];
 
 export const learning = [
