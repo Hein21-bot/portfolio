@@ -7,7 +7,7 @@
     <div class="max-w-5xl mx-auto px-6 py-24 relative z-10 w-full">
       <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-accent/10 border border-accent/20 rounded-full text-accent text-xs font-medium mb-8 animate-fade-up">
         <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-        Available for opportunities
+        Open to Remote &amp; International Relocation
       </div>
 
       <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-4 animate-fade-up" style="animation-delay:0.1s">
@@ -20,8 +20,8 @@
       </div>
 
       <p class="text-lg text-gray-400 max-w-xl mb-10 leading-relaxed animate-fade-up" style="animation-delay:0.2s">
-        Full Stack Developer with <span class="text-white font-medium">4+ years</span> building scalable web applications —
-        from REST APIs and real-time systems to responsive UIs.
+        Full Stack Developer with <span class="text-white font-medium">6+ years</span> building scalable web applications —
+        from REST APIs and real-time systems to responsive UIs. Based in Bangkok, open to relocation worldwide.
       </p>
 
       <div class="flex flex-wrap gap-4 animate-fade-up" style="animation-delay:0.3s">
@@ -72,7 +72,7 @@ const { displayed } = useTypewriter([
 ]);
 
 const stats = [
-  { value: "4+",  label: "Years Experience" },
+  { value: "6+",  label: "Years Experience" },
   { value: "10+", label: "Projects Delivered" },
   { value: "5",   label: "Companies" },
 ];

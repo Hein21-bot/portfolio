@@ -1,7 +1,7 @@
 export const profile = {
   name: "Hein Min Htet",
   title: "Full Stack Developer",
-  about: "Versatile Software Developer with 4+ years of experience delivering end-to-end solutions in dynamic web environments. Skilled in both frontend (React.js, Vue.js, Next.js) and backend (Node.js, NestJS, PostgreSQL) technologies. Adept at building full-featured platforms from design to deployment, with a strong grasp of UI/UX, database systems, and scalable server architectures.",
+  about: "Versatile Software Developer with 6+ years of experience delivering end-to-end solutions in dynamic web environments. Skilled in both frontend (React.js, Vue.js, Next.js) and backend (Node.js, NestJS, PostgreSQL) technologies. Adept at building full-featured platforms from design to deployment, with a strong grasp of UI/UX, database systems, and scalable server architectures.",
   location: "Bangkok, Thailand",
   email: "htetminhein755@gmail.com",
   phone: "+66 962192574",
@@ -118,18 +118,47 @@ export const experience = [
 
 export const projects = [
   {
+    name: "FindEain — Myanmar Rental Platform",
+    desc: "Property renters in Myanmar had no centralized platform to find and book homes. Built a full-stack rental marketplace connecting landlords and tenants with property search, booking flows, real-time chat, and localized payment integration.",
+    highlights: [
+      "Real-time tenant-landlord messaging via Socket.io",
+      "Admin approval workflow for property listings",
+      "Multi-payment support: KPay, Wave Money, AYA Pay",
+      "Role system: Tenant, Landlord, Admin with JWT auth",
+    ],
+    stack: ["Nuxt.js 3", "Vue 3", "NestJS", "PostgreSQL", "Prisma", "Socket.io", "Redis", "Google Maps API", "Tailwind CSS"],
+    icon: "🏠",
+    type: "fullstack",
+    featured: true,
+    link: "https://github.com/Hein21-bot/FindEain",
+  },
+  {
     name: "Real-time Role Dashboard",
-    desc: "Multi-role platform with live data tracking, custom reporting, and real-time notifications for users, agents, and admins.",
+    desc: "Client needed live visibility across a multi-role operation with no data lag. Built a real-time platform with role-based views for users, agents, and admins — featuring live tracking, custom reporting modules, and instant push notifications.",
+    highlights: [
+      "Live data sync via Socket.io across 3 user roles",
+      "Custom reporting engine with real-time charts",
+      "Role-based permission system for users, agents, admins",
+      "Live notifications and in-app alert system",
+    ],
     stack: ["React.js", "Socket.io", "Zustand", "AntD", "Node.js"],
     icon: "📊",
     type: "fullstack",
+    featured: true,
   },
   {
     name: "HRMS Platform",
-    desc: "Full HR management system with survey and restaurant modules. Led development across 3.5 years at Evercomm Singapore.",
+    desc: "Evercomm Singapore needed an in-house system to manage HR, surveys, and restaurant operations. Led end-to-end development over 3.5 years — from architecture through deployment — building a multi-module platform central to daily operations.",
+    highlights: [
+      "Served 200+ employees across HR, survey, and restaurant modules",
+      "Led a team of developers, enforced coding standards",
+      "3.5 years in production — full ownership from architecture to deployment",
+      "Built custom reporting engine with real-time data visuals",
+    ],
     stack: ["Node.js", "React.js", "PostgreSQL", "REST API"],
     icon: "🏢",
     type: "fullstack",
+    featured: true,
   },
   {
     name: "Event Management System",
@@ -158,6 +187,22 @@ export const projects = [
     stack: ["Next.js", "Node.js", "REST API"],
     icon: "🗺",
     type: "frontend",
+  },
+  {
+    name: "SMT — Myanmar Video Tools",
+    desc: "AI-powered video processing suite for Myanmar content creators. Converts YouTube videos into Myanmar narrated recaps, dubs videos with Myanmar text-to-speech, and replaces Chinese subtitles with Myanmar translations.",
+    stack: ["Vue.js", "Node.js", "Python", "Gemini API", "FFmpeg", "Docker", "yt-dlp"],
+    icon: "🎬",
+    type: "fullstack",
+    link: "https://github.com/Hein21-bot/recap-project",
+  },
+  {
+    name: "Patient Registration System",
+    desc: "Healthcare patient registration platform with real-time updates synced live across multiple browser sessions. Built for the Agnos Health technical assessment.",
+    stack: ["Next.js", "TypeScript", "Socket.io", "Tailwind CSS", "Node.js"],
+    icon: "🏥",
+    type: "fullstack",
+    link: "https://patient-registration-op8i.onrender.com/",
   },
   {
     name: "Dota 2 Esport Tracker",

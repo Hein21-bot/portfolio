@@ -3,9 +3,9 @@
     <NavBar />
     <HeroSection />
     <AboutSection />
-    <SkillsSection />
     <ExperienceSection />
     <ProjectsSection />
+    <SkillsSection />
     <ContactSection />
     <footer class="border-t border-gray-800 py-8 text-center text-xs text-gray-600">
       © {{ new Date().getFullYear() }} Hein Min Htet · Built with Vue.js + TailwindCSS

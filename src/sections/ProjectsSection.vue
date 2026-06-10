@@ -7,7 +7,7 @@
       </div>
 
       <!-- Filter tabs -->
-      <div class="reveal reveal-delay-1 flex gap-2 mb-8 flex-wrap">
+      <div class="reveal reveal-delay-1 flex gap-2 mb-10 flex-wrap">
         <button v-for="tab in tabs" :key="tab.value" @click="activeTab = tab.value"
           class="px-4 py-2 rounded-xl text-sm font-medium transition-all"
           :class="activeTab === tab.value
@@ -17,9 +17,42 @@
         </button>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- Featured projects (larger cards with highlights) -->
+      <div v-if="featuredFiltered.length" class="grid md:grid-cols-2 gap-5 mb-5">
         <TransitionGroup name="filter">
-          <div v-for="project in filtered" :key="project.name"
+          <div v-for="project in featuredFiltered" :key="project.name"
+            class="bg-gray-900 border border-accent/20 hover:border-accent/50 rounded-2xl p-6 flex flex-col gap-4 transition-all hover:shadow-lg hover:shadow-accent/10 group">
+            <div class="flex items-center gap-3">
+              <span class="text-4xl">{{ project.icon }}</span>
+              <span class="text-xs px-2 py-0.5 bg-accent/10 text-accent border border-accent/20 rounded-full font-medium">Featured</span>
+            </div>
+            <div class="flex-1">
+              <h3 class="font-bold text-white mb-2 group-hover:text-accent transition-colors">{{ project.name }}</h3>
+              <p class="text-sm text-gray-400 leading-relaxed mb-4">{{ project.desc }}</p>
+              <ul v-if="project.highlights" class="space-y-1.5">
+                <li v-for="h in project.highlights" :key="h" class="text-xs text-gray-500 flex gap-2">
+                  <span class="text-accent shrink-0 mt-0.5">›</span>{{ h }}
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-wrap gap-1.5">
+              <span v-for="s in project.stack" :key="s" class="tag text-xs">{{ s }}</span>
+            </div>
+            <a v-if="project.link" :href="project.link" target="_blank" rel="noopener noreferrer"
+              class="flex items-center gap-1.5 text-xs text-accent hover:text-accent-light transition-colors font-medium mt-1">
+              <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              View Project
+            </a>
+          </div>
+        </TransitionGroup>
+      </div>
+
+      <!-- Regular projects (smaller grid) -->
+      <div v-if="regularFiltered.length" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <TransitionGroup name="filter">
+          <div v-for="project in regularFiltered" :key="project.name"
             class="bg-gray-900 border border-gray-800 hover:border-accent/40 rounded-2xl p-6 flex flex-col gap-4 transition-all hover:shadow-lg hover:shadow-accent/5 group">
             <div class="text-4xl">{{ project.icon }}</div>
             <div class="flex-1">
@@ -60,6 +93,9 @@ const tabs = [
 const filtered = computed(() =>
   activeTab.value === "all" ? projects : projects.filter((p) => p.type === activeTab.value)
 );
+
+const featuredFiltered = computed(() => filtered.value.filter((p) => p.featured));
+const regularFiltered  = computed(() => filtered.value.filter((p) => !p.featured));
 </script>
 
 <style scoped>

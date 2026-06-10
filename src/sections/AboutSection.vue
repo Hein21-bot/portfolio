@@ -9,7 +9,7 @@
           <div class="flex flex-col gap-3 text-sm">
             <div class="flex items-center gap-3 text-gray-400"><span class="text-accent">📍</span> {{ location }}</div>
             <div class="flex items-center gap-3 text-gray-400"><span class="text-accent">🎓</span> B.C.Sc Computer Science — Univ. of Computer Studies, Mandalay (2014–2019)</div>
-            <div class="flex items-center gap-3 text-gray-400"><span class="text-accent">💼</span> Open to full-time & freelance roles</div>
+            <div class="flex items-center gap-3 text-gray-400"><span class="text-accent">💼</span> Open to full-time roles · Remote &amp; International Relocation Welcome</div>
           </div>
         </div>
 
