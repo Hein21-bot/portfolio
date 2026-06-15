@@ -65,9 +65,9 @@ import { useTypewriter } from "@/composables/useTypewriter.js";
 
 const { github } = profile;
 const { displayed } = useTypewriter([
-  "Full Stack Developer",
-  "Backend Developer",
-  "Frontend Developer",
+  "Senior Full-Stack Developer",
+  "Backend Engineer",
+  "Frontend Engineer",
   "Software Engineer",
 ]);
 
